@@ -1,7 +1,7 @@
 import sqlite3
 
 
-conn = sqlite3.connect('example.db')
+conn = sqlite3.connect('perlego.db')
 c = conn.cursor()
 # Create table
 c.execute('''CREATE TABLE bookSalesRights
@@ -24,7 +24,7 @@ conn.close()
 
 
 # View info in DB
-conn = sqlite3.connect('example.db')
+conn = sqlite3.connect('perlego.db')
 cur = conn.cursor()
 cur.execute("SELECT * FROM bookSalesRights")
 
