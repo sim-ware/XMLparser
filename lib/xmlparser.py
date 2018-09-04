@@ -14,6 +14,7 @@ class XMLParser:
     def find_filename(self):
         return self.filepath[-5:]
 
+
     def find_record_reference(self):
         return self.root[-1][0].text
 
@@ -22,10 +23,7 @@ class XMLParser:
         ans = self.root[-1][-3][5][0].text
         if ans == None:
             ans = "INVALID SalesRightsType"
-
         return ans
-        # return self.root[-1][-3][5][0].text
-        # IF EMPTY, RETURN INVALID AS DB COLUMN ENTRY
 
 
     def find_territory(self):

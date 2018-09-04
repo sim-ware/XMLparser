@@ -6,6 +6,7 @@ class DBHandler:
         self.conn = sqlite3.connect(filepath)
         self.cursor = self.conn.cursor()
 
+
     def create_table(self):
         self.cursor.execute('''CREATE TABLE bookSalesRights
                      (filename text, recordReference integer, salesRightsType integer, territory text)''')
